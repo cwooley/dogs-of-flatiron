@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Edit dog</title>
+  </head>
+  <body>
+    <form action="/dogs/<%= @dog.id %>" method="post">
+      <input id="hidden" type="hidden" name="_method" value="patch">
+      <p><label>Name:</label><input type="text" name="dog[name]" value="<%= @dog.name %>"></p>
+      <p><label>Breed:</label><input type="text" name="dog[breed]" value="<%= @dog.breed %>"></p>
+      <p><label>Image URL:</label><input type="text" name="dog[image_url]" value="<%= @dog.image_url %>"></p>
+      <p><input type="submit"></p>
+    </form>
+  </body>
+</html>

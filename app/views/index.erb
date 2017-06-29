@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>All Dogs of Flatiron</title>
+  </head>
+  <body>
+    <% Dog.all.each do |dog| %>
+      <h1><a href="/dogs/<%= dog.id %>"><%= dog.name %></a></h1>
+      <p><%= dog.breed %></p>
+      <img src="<%= dog.image_url %>" alt="<%= dog.name %>" width="400">
+    <% end %>
+    <p><a href="/dogs/new">Post Your Dog!</a></p>
+  </body>
+</html>

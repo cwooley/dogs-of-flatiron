@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title><%= @dog.name %></title>
+  </head>
+  <body>
+    <h1><%= @dog.name %></h1>
+    <p><%= @dog.breed %></p>
+    <img src="<%= @dog.image_url %>" alt="<%= @dog.name %>" width="400" >
+    <p>
+    <form action="/dogs/<%= @dog.id %>/edit" method="get">
+      <input type="submit" value="Edit">
+    </form> | <form action="/dogs/<%= @dog.id %>/delete" method="post">
+      <input id="hidden" type="hidden" name="_method" value="delete">
+      <input type="submit" value="Delete">
+    </form>
+    </p>
+    <p><a href="/dogs">Back to all dogs</a></p>
+
+  </body>
+</html>
